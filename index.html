@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Решение Треугольников">
+    <meta property="og:site_name" content="Решение Треугольников">
+    <meta property="og:url" content="https://spleekz.github.io/SolutionOfTrianglesApp/">
+    <meta property="og:description" content="Приложение для решения треугольников">
+    <meta property="og:image" content="https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-Resize-vHRU9rUobuUN09v.png">
+    <title>Решение Треугольников</title>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header id="header">
+        <div class="header-container">
+        <div class="header-title">
+            Решение Треугольников
+        </div>
+    </div>
+    </header>
+    <section id = 'calculator'>
+        <div class="calculator">
+            <div class="calculator-container">
+                <div class="how">
+                    <div class="how-container">
+                        <div class="how-title-block">
+                            <div class="how-title">как этим пользоваться?</div>
+                            <div class="arrow-img">
+                            <img src="img/arrow.png" width="22px" height="12px" class="arrow">
+                        </div>
+                        </div>
+                        <div class="how-description-block">
+                            <div class=" how-description">
+                            <div class="how-text">
+                                <p>1. Введите в поля ввода <span>3 изветных значения</span> треугольника в соответствии с изображением</p>
+                                <p>2. Нажмите на кнопку <span>"Рассчитать"</span></p>
+                                <p>3. Снизу будут выведены оставшиеся значения треугольника <span>(возможна небольшая погрешность)</span></p>
+                                <p><span>Примечание</span> : после каждого примера <span>обязательно</span> нажимайте на появившуюся кнопку <span>"Сбросить"</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            <div class="image">
+                <img src="img/triangle.png" alt="" width="320" height="321.2">
+            </div>
+            <div class="calculator-section">
+                <div class="calculator-title">Введите известные значения</div>
+                <div class="calculator-wrap">
+                <div class="calculator-fields">
+                    <form>
+                    <div class="calculator-item">
+                        <div class="item-text">
+                            Угол α(°)
+                        </div>
+                        <div class="item-input">
+                            <input type="text" class="input cornerinput" id="corner-α" value>
+                        </div>
+                    </div>
+                    <div class="calculator-item">
+                        <div class="item-text">
+                            Угол β(°)
+                        </div>
+                        <div class="item-input">
+                            <input type="text" class="input cornerinput" id="corner-β" value>
+                        </div>
+                    </div>
+                    <div class="calculator-item">
+                        <div class="item-text">
+                            Угол γ(°)
+                        </div>
+                        <div class="item-input">
+                            <input type="text" class="input cornerinput" id="corner-γ" value>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="calculator-item">
+                        <div class="item-text">
+                            Сторона A
+                        </div>
+                        <div class="item-input">
+                            <input type="text" id="side-a" class="input"  value>
+                        </div>
+                    </div>
+                    <div class="calculator-item">
+                        <div class="item-text" >
+                            Сторона B
+                        </div>
+                        <div class="item-input">
+                            <input type="text" id="side-b" class="input" value>
+                        </div>
+                    </div>
+                    <div class="calculator-item">
+                        <div class="item-text">
+                            Сторона C
+                        </div>
+                        <div class="item-input">
+                            <input type="text" id="side-c" class="input" value>
+                        </div>
+                    </div>
+                    <input id="reset-btn" class="reset-btn-hide" type="reset" value="Сбросить">
+                </form>
+                </div>
+                <div class="button-and-error-and-reset">
+                    <button id="calc-btn">рассчитать</button>
+                <div class="error-hide error">
+                    <div class="error-title">ОШИБКА!</div>
+                    <div class="error-text"></div>
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section id="result">
+        <div class="result">
+            <div class="result-container">
+                <div class="result-text">готово!</div>
+            <div class="result-item">
+                <div class="result-item-text">
+                Угол α = 
+            </div>
+                <div class="result-item-value" id="corner-α-result"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-item-text">
+                Угол β = 
+            </div>
+                <div class="result-item-value" id="corner-β-result"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-item-text">
+                Угол γ = 
+            </div>
+                <div class="result-item-value" id="corner-γ-result"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-item-text">
+                Сторона A = 
+            </div>
+                <div class="result-item-value" id="side-a-result" ></div>
+            </div>
+            <div class="result-item">
+                <div class="result-item-text">
+                Сторона B = 
+            </div>
+                <div class="result-item-value" id="side-b-result"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-item-text">
+                Сторона C = 
+            </div>
+                <div class="result-item-value" id="side-c-result"></div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+*{
+    margin:0;
+    padding:0;
+}
+html,body{
+    height:100%;
+    width:100%;
+}
+a{
+    text-decoration:none;
+}
+button{
+    outline:none;
+    border:0;
+}
+input{
+    outline:none;
+    border:0;
+}
+ul li{
+    list-style:none;
+}
+
+header{
+    background-color: #7ae0ff;
+}
+.header-container{
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.header-title{  
+    font-family: 'Philosopher', sans-serif;
+    font-size: 2.6rem;
+    text-align: center;
+    color: #343434;
+}
+.how{
+    position: absolute;
+    z-index: 10;
+    top:54px;
+    left:675px;
+} 
+.arrow-img{
+    transition: 0.35s;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+}
+.arrow-img:hover{
+  cursor: pointer;
+}
+.how-title-block{
+    padding: 10px;
+    position:relative;
+    background-color: #d3d3d3;
+    top:0px;
+    display: flex;
+}
+.how-title{
+  font-family: 'Philosopher', sans-serif;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color:#1e1786;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+.how-description-block{
+    width:283.67px;
+    overflow: hidden;
+}
+.how-description-show{
+    display: block!important;
+    background-color: #d3d3d3;
+}
+.how-description{
+    display: none;
+}
+.how-text{
+    font-family: 'Philosopher', sans-serif;
+    text-align: left;
+    margin-top:5px;
+    padding: 0 10px 7px 10px;
+    font-size: 1.14rem;
+    color: #000000;
+}
+.how-text span{
+    font-weight: bold;
+    font-style: italic;
+}
+p{
+    margin-top: 7px;
+}
+.calculator{
+    padding: 15px;
+}
+.calculator-container{
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 0px;
+}
+.calculator-section {
+    width: 660px;
+    margin-left: 30px;
+}
+.calculator-title {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 2rem;
+    text-align: left;
+    color: #343434;
+    margin-bottom: 20px;
+}
+img{
+    pointer-events: none;
+}
+.calculator-item {
+    width: 300px;
+    margin-right: 0px;
+    display: flex;
+    margin-bottom:20px;
+}
+.calculator-item:nth-child(3),.calculator-item:last-child{
+    margin-bottom:0;
+}
+.calculator-fields{
+    position: relative;
+    top:0px;
+}
+.item-text {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.25rem;
+    text-align: center;
+    color: #343434;
+    margin-bottom: 20px;
+}
+.input{
+    border:2px solid #000;
+    margin-left: 10px;
+    padding: 6px;
+}
+.corner{
+    margin-left: 47px !important;
+}
+.calculator-button{
+    width: 140px;
+}
+.button-and-error-and-reset{
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    margin-top: 20px;
+}
+button{
+    min-width: 140px;
+    min-height: 65px;
+    border-radius: 2px;
+    background-color: #7ae0ff;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 1.3rem;
+    color: #343434;
+    text-transform: uppercase;
+}
+button:hover{
+    cursor: pointer;
+}
+.reset-btn-show{
+    margin-left:15px;
+    min-height: 50px;
+    min-width: 70px;
+    background-color: #d5e1e1;
+    position: absolute;
+    top:408px;
+    left:-120px;
+}
+.reset-btn-hide{
+    display: none;
+}
+#reset-btn{
+    padding: 5px;
+    font-family: 'Philosopher', sans-serif; ;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: #343434;
+    border-radius: 2px;
+    font-weight: bold;
+}
+#reset-btn:hover{
+    cursor: pointer;
+}
+.error{
+    margin-left: 10px;
+}
+.error-hide{
+    display: none;
+}
+.error-show{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.error-title{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.5rem;
+    color:#ff0000;
+    text-align: center;
+}
+.error-text{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.2rem;
+    color:#ff0000;
+    text-align: center;
+}
+#result{
+    display: none;
+    min-width: 100%;
+}
+.result{
+    background-color: #b8b8b8;
+    min-height: 278px;
+    padding: 18px;
+}
+.result-container{
+    max-width: 980px;
+    margin: 0 auto;
+}
+.result-text{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 2.1rem;
+    text-align: center;
+    color: #343434;
+    text-transform: uppercase;
+}
+.result-item{
+    display: flex;
+}
+.result-item-text, .result-item-value{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 2.2rem;
+    text-align: center;
+    color: #343434;
+}
+.result-item-value{
+    color:#1e1786;
+}
+.cornerinput{
+    margin-left: 27px;
+}
+@media(max-width:1024px){
+    header{
+        min-width: 1024px;
+    }
+    #calculator{
+        min-width: 1024px;
+    }
+    #result{
+        min-width: 1024px;
+    }
+    .reset-btn-show{
+        top:545px;
+    }
+}
+@media(max-width:430px){
+    .how{
+        display: none;
+    }
+    header{
+        min-width: 670px;
+    }
+    #calculator{
+        min-width: 670px;
+    }
+    #result{
+        min-width: 670px;
+    }
+}
